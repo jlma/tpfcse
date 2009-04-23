@@ -1,0 +1,27 @@
+<h1>Editing club</h1>
+
+<%= error_messages_for :club %>
+
+<% form_for(@club) do |f| %>
+  <p>
+    <b>Club name</b><br />
+    <%= f.text_field :club_name %>
+  </p>
+
+  <p>
+    <b>State</b><br />
+    <%= f.text_field :state %>
+  </p>
+
+  <p>
+    <b>Logo file</b><br />
+    <%= f.text_field :logo_file %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @club %> |
+<%= link_to 'Back', clubs_path %>

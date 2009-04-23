@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  location: MyString
+  name: MyString
+  location_address: MyString
+  location_city: MyString
+  location_state: MyString
+  location_zip: MyString
+  reservation_phone: MyString
+  camping_fee: MyString
+  event_hosts: MyString
+  location_gps: MyString
+  notes: MyText
+  start_date: 2009-04-18
+  end_date: 2009-04-18
+
+two:
+  location: MyString
+  name: MyString
+  location_address: MyString
+  location_city: MyString
+  location_state: MyString
+  location_zip: MyString
+  reservation_phone: MyString
+  camping_fee: MyString
+  event_hosts: MyString
+  location_gps: MyString
+  notes: MyText
+  start_date: 2009-04-18
+  end_date: 2009-04-18

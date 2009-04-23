@@ -1,0 +1,18 @@
+<h1>Camping Schedule</h1>
+<% for club in @clubs %>
+	<% unless club.events.empty? %>
+	  <h2><%=h club.club_name %></h2>
+	  <% for event in @events %>	
+		  
+		  <ul>
+		    <li><%=h event.start_date event.end_date event.location event.location_city  =></li>  
+		  </ul>
+		<% end %> 
+	<% end %>
+<% end %>
+
+
+
+
+
+

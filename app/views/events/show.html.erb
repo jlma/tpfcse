@@ -1,0 +1,73 @@
+<p>
+  <b>Host Club:</b>
+  <%=h @event.host_club %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @event.location %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @event.name %>
+</p>
+
+<p>
+  <b>Location address:</b>
+  <%=h @event.location_address %>
+</p>
+
+<p>
+  <b>Location city:</b>
+  <%=h @event.location_city %>
+</p>
+
+<p>
+  <b>Location state:</b>
+  <%=h @event.location_state %>
+</p>
+
+<p>
+  <b>Location zip:</b>
+  <%=h @event.location_zip %>
+</p>
+
+<p>
+  <b>Reservation phone:</b>
+  <%=h @event.reservation_phone %>
+</p>
+
+<p>
+  <b>Camping fee:</b>
+  <%=h @event.camping_fee %>
+</p>
+
+<p>
+  <b>Event hosts:</b>
+  <%=h @event.event_hosts %>
+</p>
+
+<p>
+  <b>Location gps:</b>
+  <%=h @event.location_gps %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%=h @event.notes %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%=h @event.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @event.end_date %>
+</p>
+
+<% logged_in? %>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

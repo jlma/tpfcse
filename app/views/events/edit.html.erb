@@ -1,0 +1,82 @@
+<h1>Editing event</h1>
+
+<%= error_messages_for :event %>
+
+<% form_for(@event) do |f| %>
+  <p>
+    <b>Host Club</b>
+    <%= f.collection_select :club_ids, Club.find(:all, :order => 'state'), :id, :club_name, {}, :multiple => false %>
+  <p>
+  
+  <p>
+    <b>Location</b><br />
+    <%= f.text_field :location %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Location address</b><br />
+    <%= f.text_field :location_address %>
+  </p>
+
+  <p>
+    <b>Location city</b><br />
+    <%= f.text_field :location_city %>
+  </p>
+
+  <p>
+    <b>Location state</b><br />
+    <%= f.text_field :location_state %>
+  </p>
+
+  <p>
+    <b>Location zip</b><br />
+    <%= f.text_field :location_zip %>
+  </p>
+
+  <p>
+    <b>Reservation phone</b><br />
+    <%= f.text_field :reservation_phone %>
+  </p>
+
+  <p>
+    <b>Camping fee</b><br />
+    <%= f.text_field :camping_fee %>
+  </p>
+
+  <p>
+    <b>Event hosts</b><br />
+    <%= f.text_field :event_hosts %>
+  </p>
+
+  <p>
+    <b>Location gps</b><br />
+    <%= f.text_field :location_gps %>
+  </p>
+
+  <p>
+    <b>Notes</b><br />
+    <%= f.text_area :notes %>
+  </p>
+
+  <p>
+    <b>Start date</b><br />
+    <%= f.date_select :start_date %>
+  </p>
+
+  <p>
+    <b>End date</b><br />
+    <%= f.date_select :end_date %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @event %> |
+<%= link_to 'Back', events_path %>

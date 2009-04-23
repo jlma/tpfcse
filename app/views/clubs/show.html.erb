@@ -1,0 +1,18 @@
+<p>
+  <b>Club name:</b>
+  <%=h @club.club_name %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @club.state %>
+</p>
+
+<p>
+  <b>Logo file:</b>
+  <%=h @club.logo_file %>
+</p>
+
+
+<%= link_to 'Edit', edit_club_path(@club) %> |
+<%= link_to 'Back', clubs_path %>

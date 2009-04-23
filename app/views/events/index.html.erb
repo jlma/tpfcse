@@ -1,0 +1,46 @@
+<h1>Listing events</h1>
+
+<table>
+  <tr>
+    <th>Host Club</th>
+    <th>Location</th>
+    <th>Name</th>
+    <th>Location address</th>
+    <th>Location city</th>
+    <th>Location state</th>
+    <th>Location zip</th>
+    <th>Reservation phone</th>
+    <th>Camping fee</th>
+    <th>Event hosts</th>
+    <th>Location gps</th>
+    <th>Notes</th>
+    <th>Start date</th>
+    <th>End date</th>
+  </tr>
+
+<% for event in @events %>
+  <tr>
+    <td><%=h event.host_club %></td>
+    <td><%=h event.location %></td>
+    <td><%=h event.name %></td>
+    <td><%=h event.location_address %></td>
+    <td><%=h event.location_city %></td>
+    <td><%=h event.location_state %></td>
+    <td><%=h event.location_zip %></td>
+    <td><%=h event.reservation_phone %></td>
+    <td><%=h event.camping_fee %></td>
+    <td><%=h event.event_hosts %></td>
+    <td><%=h event.location_gps %></td>
+    <td><%=h event.notes %></td>
+    <td><%=h event.start_date %></td>
+    <td><%=h event.end_date %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New event', new_event_path %>
