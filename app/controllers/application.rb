@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery # :secret => '4acef91c5aa1d10e8d319bc2219d548e'
   
   include AuthenticatedSystem
-  
+
   before_filter :get_pages_for_tabs
-  
+
   def get_pages_for_tabs
     if logged_in?
       @tabs = Page.find_main
@@ -24,5 +24,5 @@ class ApplicationController < ActionController::Base
     @page = Page.find_by_name(params[:name])
     @pagetitle = @page.title
   end
-  
+
 end
