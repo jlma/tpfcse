@@ -1,0 +1,24 @@
+<% for club in @clubs %>
+  <% unless club.officers.empty? %>
+    <% for officer in club.officers %>
+	<p>
+		<b>Office:</b>
+			<%=h @officer.office_name %>
+	</p>
+	<p>
+		<b>Officer:</b>
+			<%=h @officer.officer_name %>
+	</p>
+	<p>
+		<b>Club:</b>
+			<%=h club.club_name %>
+	</p>
+	<p>
+		<b>Current:</b>
+			<%=h @officer.current %>
+	</p>
+		<% end %>
+  <% end %>
+<% end %>
+<%= link_to 'Edit', edit_officer_path(@officer) %> |
+<%= link_to 'Back', officers_path %>

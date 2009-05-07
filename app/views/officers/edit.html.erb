@@ -1,0 +1,32 @@
+<h1>Editing officer</h1>
+
+<%= error_messages_for :officer %>
+
+<% form_for(@officer) do |f| %>
+  <p>
+    <b>Office</b><br />
+    <%= f.text_field :office %>
+  </p>
+
+  <p>
+    <b>Officer</b><br />
+    <%= f.text_field :officer %>
+  </p>
+
+  <p>
+    <b>Club</b><br />
+    <%= <%= f.collection_select :club_ids, Club.find(:all, :order => 'state'), :id, :club_name, {}, :multiple => false %>
+  </p>
+
+  <p>
+    <b>Current</b><br />
+    <%= f.check_box :current %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @officer %> |
+<%= link_to 'Back', officers_path %>

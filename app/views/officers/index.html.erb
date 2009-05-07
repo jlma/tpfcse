@@ -1,0 +1,30 @@
+<h1>Listing officers</h1>
+
+<table>
+  <tr>
+    <th>Club</th>
+    <th>Office</th>
+    <th>Officer</th>
+    <th>Current</th>
+  </tr>
+
+<% for officer in @officers %>
+  <% for club in @clubs %>
+		<% unless club.events.empty? %>
+    <tr>
+      <td><%=h club.club_name %>
+      <td><%=h officer.office_name %></td>
+      <td><%=h officer.officer_name %></td>
+      <td><%=h officer.current %></td>
+      <td><%= link_to 'Show', officer %></td>
+      <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
+      <td><%= link_to 'Destroy', officer, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  <% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New officer', new_officer_path %>
