@@ -1,0 +1,19 @@
+<h1>Club Officers</h1>
+	<% for club in @clubs %>
+		<% unless club.officers.empty? %>
+			<h2><%=h club.club_name %></h2>
+			<table>
+				<tr>
+					<th>Office</th>
+					<th>Officer Name</th>
+				</tr>
+
+				<% for officer in club.officers %>
+				<tr>
+					<td><%=h officer.office_name %></td>
+					<td><%=h officer.officer_name %></td>
+				</tr>
+				<% end %>
+			</table>
+		<% end %>
+	<% end %>
